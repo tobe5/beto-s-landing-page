@@ -1,13 +1,10 @@
 {
   "hosting": {
-    "source": ".",
+    "public": "beto-s-landing-page_dfe2965e82ce597e",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    ]
   }
 }
