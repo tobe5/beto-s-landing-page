@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/569ce4b8f30dc480-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" as="image" href="pictures_of_beto/pfp3.png"/><link rel="preload" as="image" href="pictures_of_beto/betocoffee.png"/><link rel="stylesheet" href="/_next/static/css/dff90bb72ab001f4.css" data-precedence="next"/><style>
-.page_header__kVzhN{display:none!important}
+.page_header__kVzhN{display:none!important}body,html{background:#000!important}.beto-terminal{background:#000!important}.beto-term-body{background:#000!important}[style*="z-index:9999"],[style*="z-index: 9999"]{display:none!important}[style*="z-index:10000"],[style*="z-index: 10000"]{display:none!important}
 
 /* ── HERO REDESIGN ── */
 .page_section_hero__h0Qlx{ display:none!important; }
@@ -50,6 +50,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
+localStorage.setItem('skipIntro','true');
 function splitLetters(el) {
   var text = el.innerText;
   el.innerHTML = '';
@@ -194,7 +195,7 @@ function splitLetters(el) {
 
       /* ── contact ── */
       .beto-contact{padding:12rem 80px;background:#000;position:relative;overflow:hidden}
-      .beto-contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 100%,#ffffff08,transparent);pointer-events:none}
+      .beto-contact::before{display:none}
       .beto-contact-inner{max-width:800px;margin:0 auto;text-align:center;position:relative}
       .beto-contact-sub{font-size:1.1rem;color:#444;margin:0 0 3.5rem;letter-spacing:.04em}
       .beto-contact-btn{display:inline-flex;align-items:center;gap:.6rem;padding:1.1rem 3rem;background:#fff;color:#000;text-decoration:none;font-size:.9rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:4px;transition:background .4s,color .4s,transform .3s}
@@ -298,6 +299,148 @@ function splitLetters(el) {
     }
   });
   heroObserver.observe(document.body, { childList: true, subtree: true });
+
+  // ── PROGRAMMER DETAILS ──
+
+  // console easter egg
+  console.log('%c Hi there, fellow dev 👋', 'font-size:18px;font-weight:bold;color:#fff;background:#000;padding:8px 16px;border-left:3px solid #fff');
+  console.log('%c Built by Beto — Senior Software Engineer', 'font-size:12px;color:#555;padding:4px 16px');
+  console.log('%c git log --oneline\n f96e20b add firebase files\n cfa65a3 add ignore\n 4926adf initial commit', 'font-family:monospace;color:#444;padding:4px 16px');
+
+  // blinking cursor after hero name
+  var heroName = document.querySelector('.beto-hero-name');
+  if (heroName) {
+    var cursor = document.createElement('span');
+    cursor.className = 'beto-cursor';
+    cursor.textContent = '_';
+    heroName.appendChild(cursor);
+  }
+
+  // git hash badge top-right of hero
+  var heroEl2 = document.querySelector('.beto-hero');
+  if (heroEl2) {
+    var hashBadge = document.createElement('span');
+    hashBadge.className = 'beto-hash';
+    hashBadge.textContent = 'f96e20b';
+    heroEl2.appendChild(hashBadge);
+  }
+
+  // </> badge bottom-left of hero
+  if (heroEl2) {
+    var codeBadge = document.createElement('span');
+    codeBadge.className = 'beto-code-badge';
+    codeBadge.textContent = '</>';
+    heroEl2.appendChild(codeBadge);
+  }
+
+  // terminal block above contact section
+  var contactEl = document.querySelector('.beto-contact');
+  if (contactEl) {
+    var termWrap = document.createElement('div');
+    termWrap.style.cssText = 'background:#000;padding:5rem 80px 0;';
+    var term = document.createElement('div');
+    term.className = 'beto-terminal';
+    termWrap.appendChild(term);
+    contactEl.parentNode.insertBefore(termWrap, contactEl);
+    term.innerHTML = `
+      <div class="beto-term-bar"><span class="beto-dot r"></span><span class="beto-dot y"></span><span class="beto-dot g"></span><span class="beto-term-title">beto@macbook ~ </span></div>
+      <div class="beto-term-body">
+        <div class="beto-term-line"><span class="beto-term-prompt">$</span> whoami</div>
+        <div class="beto-term-out">Alberto Cambronero — Senior Software Engineer</div>
+        <div class="beto-term-line"><span class="beto-term-prompt">$</span> cat skills.txt</div>
+        <div class="beto-term-out">TypeScript · React · Node · Python · FastAPI · PostgreSQL · Docker · AWS</div>
+        <div class="beto-term-line"><span class="beto-term-prompt">$</span> echo $STATUS</div>
+        <div class="beto-term-out">Available for work</div>
+        <div class="beto-term-line"><span class="beto-term-prompt">$</span> <span class="beto-cursor-term">▋</span></div>
+      </div>
+    `;
+  }
+
+  // subtle // comments on service cards
+  document.querySelectorAll('.beto-card').forEach(function(card, i) {
+    var comment = document.createElement('span');
+    comment.className = 'beto-comment';
+    comment.textContent = '// 0' + (i+1);
+    card.prepend(comment);
+  });
+
+  // ASCII art hidden in about section
+  var aboutText = document.querySelector('.page_textContainer__g1_WS');
+  if (aboutText) {
+    var ascii = document.createElement('pre');
+    ascii.className = 'beto-ascii';
+    ascii.textContent =
+`██████╗ ███████╗████████╗ ██████╗
+██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗
+██████╔╝█████╗     ██║   ██║   ██║
+██╔══██╗██╔══╝     ██║   ██║   ██║
+██████╔╝███████╗   ██║   ╚██████╔╝
+╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ `;
+    aboutText.appendChild(ascii);
+  }
+
+  // inject all programmer styles
+  var progStyle = document.createElement('style');
+  progStyle.innerHTML = `
+    .beto-cursor{
+      display:inline-block;font-style:normal;font-weight:300;color:#fff;
+      animation:blink 1s step-end infinite;margin-left:4px;
+    }
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+    .beto-hash{
+      position:absolute;bottom:3rem;right:80px;
+      font-family:monospace;font-size:.7rem;color:#222;
+      letter-spacing:.1em;user-select:none;
+    }
+    .beto-hash::before{content:'# '}
+
+    .beto-code-badge{
+      position:absolute;bottom:3rem;left:80px;
+      font-family:monospace;font-size:.85rem;color:#2a2a2a;
+      letter-spacing:.05em;font-weight:700;
+    }
+
+    .beto-terminal{
+      background:#000;border:1px solid #1a1a1a;border-radius:8px;
+      max-width:680px;margin:0 auto 5rem;font-family:monospace;overflow:hidden;
+    }
+    .beto-term-bar{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-bottom:1px solid #1a1a1a;background:#0a0a0a}
+    .beto-dot{width:10px;height:10px;border-radius:50%}
+    .beto-dot.r{background:#ff5f57}.beto-dot.y{background:#febc2e}.beto-dot.g{background:#28c840}
+    .beto-term-title{font-size:.7rem;color:#555;margin-left:.5rem;letter-spacing:.05em}
+    .beto-term-body{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.6rem}
+    .beto-term-line{font-size:.8rem;color:#ccc}
+    .beto-term-prompt{color:#555;margin-right:.6rem}
+    .beto-term-out{font-size:.78rem;color:#444;padding-left:1.4rem}
+    .beto-cursor-term{animation:blink 1s step-end infinite;color:#888}
+
+    .beto-comment{
+      font-family:monospace;font-size:.65rem;color:#2a2a2a;
+      letter-spacing:.08em;display:block;margin-bottom:.5rem;
+    }
+
+    .beto-ascii{
+      font-family:monospace;font-size:.28rem;color:#1e1e1e;
+      line-height:1.2;margin-top:3rem;overflow:hidden;user-select:none;
+      letter-spacing:.05em;
+    }
+
+    @media(max-width:768px){
+      .beto-hash,.beto-code-badge{display:none}
+      .beto-terminal{margin:0 24px 3rem}
+    }
+  `;
+  document.head.appendChild(progStyle);
+
+  // terminal reveal animation
+  gsap.from('.beto-terminal', {
+    scrollTrigger:{trigger:'.beto-terminal',start:'top 88%'},
+    y:30,opacity:0,duration:1.4,ease:'expo.out'
+  });
+  document.querySelectorAll('.beto-term-line, .beto-term-out').forEach(function(el,i){
+    gsap.from(el,{scrollTrigger:{trigger:'.beto-terminal',start:'top 88%'},opacity:0,duration:.01,delay:i*0.18});
+  });
 
   // --- Work section: scroll animations ---
   gsap.utils.toArray('.beto-project').forEach(function(p, i) {
