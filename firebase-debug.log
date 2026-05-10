@@ -1,0 +1,88 @@
+[debug] [2026-05-10T06:49:46.715Z] ----------------------------------------------------------------------
+[debug] [2026-05-10T06:49:46.720Z] Command:       /opt/homebrew/Cellar/node@20/20.20.0/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2026-05-10T06:49:46.720Z] CLI Version:   13.33.0
+[debug] [2026-05-10T06:49:46.720Z] Platform:      darwin
+[debug] [2026-05-10T06:49:46.720Z] Node Version:  v20.20.0
+[debug] [2026-05-10T06:49:46.720Z] Time:          Sun May 10 2026 00:49:46 GMT-0600 (Central Standard Time)
+[debug] [2026-05-10T06:49:46.720Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-10T06:49:46.835Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-10T06:49:46.835Z] > authorizing via signed-in user (albcambro25@gmail.com)
+[debug] [2026-05-10T06:49:46.835Z] [iam] checking project beto-s-landing-page for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-10T06:49:46.836Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:46.836Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:46.836Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/beto-s-landing-page:testIamPermissions [none]
+[debug] [2026-05-10T06:49:46.836Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/beto-s-landing-page:testIamPermissions x-goog-quota-user=projects/beto-s-landing-page
+[debug] [2026-05-10T06:49:46.837Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beto-s-landing-page:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-10T06:49:47.153Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/beto-s-landing-page:testIamPermissions 200
+[debug] [2026-05-10T06:49:47.153Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beto-s-landing-page:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-10T06:49:47.153Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:47.153Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:47.153Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/beto-s-landing-page [none]
+[debug] [2026-05-10T06:49:47.635Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/beto-s-landing-page 200
+[debug] [2026-05-10T06:49:47.636Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/beto-s-landing-page {"projectId":"beto-s-landing-page","projectNumber":"665907599334","displayName":"beto-s-landing-page","name":"projects/beto-s-landing-page","resources":{"hostingSite":"beto-s-landing-page"},"state":"ACTIVE","etag":"1_7242038c-6b22-488d-9df8-2a68c729df4d"}
+[info] 
+[info] === Deploying to 'beto-s-landing-page'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-10T06:49:47.643Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:47.643Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:47.643Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions [none]
+[debug] [2026-05-10T06:49:47.643Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-10T06:49:48.818Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions 200
+[debug] [2026-05-10T06:49:48.818Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions {"name":"projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[beto-s-landing-page]: beginning deploy... 
+[info] i  hosting[beto-s-landing-page]: found 40 files in beto-s-landing-page_dfe2965e82ce597e 
+[debug] [2026-05-10T06:49:48.833Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-10T06:49:48.839Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:48.839Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:48.840Z] [hosting] hash cache [YmV0by1zLWxhbmRpbmctcGFnZV9kZmUyOTY1ZTgyY2U1OTdl] stored for 40 files
+[debug] [2026-05-10T06:49:48.840Z] [hosting][hash queue][FINAL] {"max":5,"min":0,"avg":0.125,"active":0,"complete":40,"success":40,"errored":0,"retried":0,"total":40,"elapsed":6}
+[debug] [2026-05-10T06:49:48.841Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370:populateFiles [none]
+[debug] [2026-05-10T06:49:48.841Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370:populateFiles {"files":{"/window.svg":"11deaca6eadbb148caace8a5fe4a67353112de0afc5da83005d4797e403ab4f1","/vercel.svg":"9a61e768442ba3450026d0d69421315044931cbffaf8f6019f856ea82dd91e4e","/next.svg":"33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","/globe.svg":"ffe166407c928caa4d1640e2786d3385468043b3b9e6ea2282d4a3e370b3bc23","/file.svg":"154a8c2948836a88c695a789045bc44cc74c3d8958d5785a531d26324bc42cb1","/favicon.ico":"04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59","/404.html":"1b2b012a06b61c837fdee079e6b4c4053d7122a480aa40dc629aded5667d4809","/pictures_of_beto/pfp3.png":"99c5b7378ee1b574499b4d491ac1b494195fd63021dbbb50772ad126a206c2c1","/pictures_of_beto/pfp2.png":"a1e9d7fc4530f6d14a8219b308df231b039a919b45a933184e970ca9e92a9668","/pictures_of_beto/pfp.png":"50e1f9c9bf97b233c4f4069181ef143c32a280cebeeef76ea7f3bf53a2e0177a","/pictures_of_beto/me.png":"c382c083810a157e09f33c4c61a167d38c59248ed27939d705d9219b4a8da97e","/pictures_of_beto/betocoffee.png":"d0cb90d5d388e938b05d4c8e20e5d601533dec651b021505bf20d7be04f2402d","/pictures_of_beto/Screenshot 2025-04-21 at 17.24.15.png":"d95755690869605b5c49e1f9091cd4adbe3b983599359e631a154f5d19337bc3","/pictures_of_beto/Screenshot 2025-04-21 at 17.11.35.png":"f536e00ac2865f6ff4f576017b7d8657c1d40083b230e69fc09f8a42110d0586","/pictures_of_beto/Screenshot 2025-04-21 at 17.11.25.png":"0560da08568fd5e08ae8f2b90759a6b8aa7abd77aed327f5ab97d89ad6b00c81","/_next/static/media/ba015fad6dcf6784-s.woff2":"2b719e95831c9d92a31ebbe512bbd87cc76501765edb9b6ca4734cc5a2becb94","/_next/static/media/93f479601ee12b01-s.p.woff2":"d4a2afa79a272709433753cffe4f64c13e37ae2fdfa1ded22b38c83f978b78a4","/_next/static/media/747892c23ea88013-s.woff2":"396955195c54144bce504511dd89d0c74a3f6b453d73823073be1a2cbe00e6de","/_next/static/media/569ce4b8f30dc480-s.p.woff2":"e3af8d624c151cdd9e31d5481b83adce9d68cf582a2187efaa80eaa62b60a94f","/_next/static/cxGPfCQJtl1d1QkkLyigM/_ssgManifest.js":"02dbc1aeab6ef0a6ff2ff9a1643158cf9bb38929945eaa343a3627dee9ba6778","/_next/static/cxGPfCQJtl1d1QkkLyigM/_buildManifest.js":"90d2b2148c1068bd8506ba79e35fab183778b9e6ab7f45e18684ea52b55482c5","/_next/static/css/dff90bb72ab001f4.css":"e0d5cd7832ede5474c058332febdc8d40f6d515ae8c656bf17cf5c8f1b580ccc","/_next/static/css/010bbdf8317f68d7.css":"8f96c29e3c91e7f732182b9424ef6f3d393a1a4f77f839dbe20292c991180085","/_next/static/chunks/webpack-77ef6f39f0504961.js":"4c205db64110595bc163621f38ebca9b020f0fc89f9d1e496b92ea0dc63a05a6","/_next/static/chunks/polyfills-42372ed130431b0a.js":"bea630d9824beca22855271c757404b58bb7b410c52a5e7d58d69ff26d9ddd0b","/_next/static/chunks/main-app-03152a84e14cf49f.js":"334520d7ed46e9d0fb1348b626abcfa6aa70c8ca13ae8f5cea7563088abb2a5c","/_next/static/chunks/main-a0da618c76e6551f.js":"4408620a0508a7648253af615b1a8a2a8ca8d329338cb5ad2d283d632f6a3f26","/_next/static/chunks/framework-859199dea06580b0.js":"facaf184cef56335136f9b6c970d9d38c1e5408d626178c9fb4b436688f2fd95","/_next/static/chunks/c15bf2b0-632a50f1802a0b14.js":"4c24c5a7d979c01ba1d01912b39f17f09d84471d67e559f630e175d4b20d011c","/_next/static/chunks/82-90be0c5c73f931b9.js":"7887bbcb46a1fb178bb70e6bedb4f72d8eeeaa9f2a494f200395b81f82af6897","/_next/static/chunks/684-26b98d393d465cca.js":"7bc6c5ca5b46b466619bc2f374d5932dca813f4e379d4bb4174f927e277f75bf","/_next/static/chunks/4bd1b696-fc09fd79feedbf53.js":"d9a76e47eed0f237cf2a75b3186bdd6fd59423e1dd1d91fc0ef538c3167b75dd","/_next/static/chunks/pages/_error-cc3f077a18ea1793.js":"5d8c66a57ebffe7f13593b9295d6bbaacec19b0bc0c2b063a4d442c3b96b8f8e","/_next/static/chunks/pages/_app-da15c11dea942c36.js":"0cc691b3564f0d92076502fb7d4516e9de5df3742d4da971369ff3adb31ba4b5","/_next/static/chunks/app/page-21511f7cc6d10584.js":"93f997f2034107508d950672f33119539609917378f8f760f0017b9674f309de","/_next/static/chunks/app/layout-4046f7ac46561b71.js":"4ea5c2a777cf70926a1000a1e3a2595a98977d539586569a3e08ea7d5258981e","/_next/static/chunks/app/_not-found/page-2bbeefd619e1c8fe.js":"c22a4f238ed1044efb55203498362d16b097d8fc2315c6b071798490c34e1ee5","/__/firebase/init.json":"23898e79d70304b1a20742c6a596618caef646a571db55207b7994c7bf78c13b","/__/firebase/init.js":"f267f3f04ed549376ce69a12bd83411e597d93319da08009e6bafff2f1658daf","/index.html":"f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361"}}
+[debug] [2026-05-10T06:49:49.677Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370:populateFiles 200
+[debug] [2026-05-10T06:49:49.677Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370:populateFiles {"uploadRequiredHashes":["f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370/files"}
+[debug] [2026-05-10T06:49:49.678Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:49.678Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:49.678Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370/files/f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361 [none]
+[debug] [2026-05-10T06:49:49.678Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370/files/f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361 [stream]
+[debug] [2026-05-10T06:49:49.679Z] [hosting][populate queue][FINAL] {"max":839,"min":839,"avg":839,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":840}
+[debug] [2026-05-10T06:49:49.680Z] [hosting] uploads queued: 1
+[debug] [2026-05-10T06:49:50.625Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370/files/f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361 200
+[debug] [2026-05-10T06:49:50.625Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370/files/f209a605eb4d2374517b25e4321f0a855a473a00d6183d16734c6621c5375361 [stream]
+[debug] [2026-05-10T06:49:50.625Z] [hosting][upload queue][FINAL] {"max":948,"min":948,"avg":948,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":948}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[beto-s-landing-page]: file upload complete 
+[debug] [2026-05-10T06:49:50.626Z] [hosting] deploy completed after 1806ms
+[debug] [2026-05-10T06:49:50.626Z] [
+  {
+    "config": {
+      "public": "beto-s-landing-page_dfe2965e82ce597e",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "beto-s-landing-page"
+    },
+    "version": "projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370"
+  }
+]
+[info] i  hosting[beto-s-landing-page]: finalizing version... 
+[debug] [2026-05-10T06:49:50.628Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:50.628Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:50.629Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370 updateMask=status%2Cconfig
+[debug] [2026-05-10T06:49:50.629Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370 {"status":"FINALIZED","config":{}}
+[debug] [2026-05-10T06:49:51.208Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370 200
+[debug] [2026-05-10T06:49:51.208Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370 {"name":"projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-10T06:49:48.237281Z","createUser":{"email":"albcambro25@gmail.com"},"finalizeTime":"2026-05-10T06:49:51.078602Z","finalizeUser":{"email":"albcambro25@gmail.com"}}
+[debug] [2026-05-10T06:49:51.208Z] [hosting] finalized version for beto-s-landing-page:[object Object]
+[info] ✔  hosting[beto-s-landing-page]: version finalized 
+[info] i  hosting[beto-s-landing-page]: releasing new version... 
+[debug] [2026-05-10T06:49:51.209Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:51.209Z] Checked if tokens are valid: true, expires at: 1778399222499
+[debug] [2026-05-10T06:49:51.209Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/channels/live/releases versionName=projects%2F665907599334%2Fsites%2Fbeto-s-landing-page%2Fversions%2F3dbc8dc76c6ff370
+[debug] [2026-05-10T06:49:51.209Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/channels/live/releases {}
+[debug] [2026-05-10T06:49:52.100Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/channels/live/releases 200
+[debug] [2026-05-10T06:49:52.100Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/beto-s-landing-page/channels/live/releases {"name":"projects/665907599334/sites/beto-s-landing-page/channels/live/releases/1778395791355000","version":{"name":"projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-10T06:49:48.237281Z","createUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"},"finalizeTime":"2026-05-10T06:49:51.078602Z","finalizeUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"}},"type":"DEPLOY","releaseTime":"2026-05-10T06:49:51.355Z","releaseUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"}}
+[debug] [2026-05-10T06:49:52.100Z] [hosting] release: {"name":"projects/665907599334/sites/beto-s-landing-page/channels/live/releases/1778395791355000","version":{"name":"projects/665907599334/sites/beto-s-landing-page/versions/3dbc8dc76c6ff370","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-10T06:49:48.237281Z","createUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"},"finalizeTime":"2026-05-10T06:49:51.078602Z","finalizeUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"}},"type":"DEPLOY","releaseTime":"2026-05-10T06:49:51.355Z","releaseUser":{"email":"albcambro25@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKD8bkE97AvzX1T1dR-rFPEgEer_49uHy25F70TZrkGCrN60fofvw"}}
+[info] ✔  hosting[beto-s-landing-page]: release complete 
